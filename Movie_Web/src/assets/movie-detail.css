@@ -1,0 +1,359 @@
+/* 电影详情页专用样式 */
+.movie-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .basic-info {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .poster-section {
+    position: relative;
+  }
+
+  .movie-poster {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+
+.interaction-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+  }
+
+  .rating-box {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .star {
+    color: #ddd;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+
+  .star.active {
+    color: #f5b50a;
+  }
+
+  .review-section {
+    margin-top: 2rem;
+  }
+
+  .write-review textarea {
+    width: 100%;
+    height: 100px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+
+  .review-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .review-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .user-info {
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .review-content {
+    flex: 1;
+  }
+
+  .meta {
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+    .movie-detail-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .basic-info {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .poster-section {
+      position: relative;
+    }
+
+    .movie-poster {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .meta-section {
+      padding: 1rem;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .sub-info {
+      display: flex;
+      gap: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .rating-section {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+
+    .vote-average {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #f5b50a;
+    }
+
+    .vote-count {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .action-buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .favorite {
+      background: #e74c3c;
+      color: white;
+    }
+
+    .ticketing {
+      background: #27ae60;
+      color: white;
+      font-weight: bold;
+    }
+
+    .ticketing:hover {
+      background: #2ecc71;
+    }
+
+    .share {
+      background: #3498db;
+      color: white;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      border-left: none;
+      padding-left: 0;
+      margin: 2rem 0;
+    }
+
+    .overview {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .crew-section {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+    }
+
+    .cast-list {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem 0;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+  }
+
+
+  .cast-item {
+      flex: 0 0 180px;
+      scroll-snap-align: start;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+  }
+
+  .actor-photo {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+  }
+  .character {
+    display: block;
+    color: #666;
+    font-size: 0.8rem;
+    white-space: normal; /* 允许换行 */
+  }
+
+    .technical-info {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .info-item {
+      padding: 0.5rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .recommendation-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .recommendation-item {
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .recommendation-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .recommendation-poster {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .loading-spinner {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .error-message {
+      padding: 2rem;
+      text-align: center;
+      color: #e74c3c;
+    }
+
+    .directors ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .directors li {
+    background: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+
+    @media (max-width: 768px) {
+      .basic-info {
+        grid-template-columns: 1fr;
+      }
+
+      .crew-section {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 响应式布局 */
+  @media (min-width: 1024px) {
+    .cast-list {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-auto-flow: unset;
+      overflow-x: visible;
+    }
+  }
+
+  .cast-list::-webkit-scrollbar {
+    height: 8px;
+    background-color: #f5f5f5;
+  }
+
+  .cast-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+
+  .cast-list::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+  }
+
+  /* 添加过渡动画 */
+  .recommendation-item {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .recommendation-item:hover {
+    transform: scale(1.05);
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter-from, .fade-leave-to {
+    opacity: 0;
+  }
+

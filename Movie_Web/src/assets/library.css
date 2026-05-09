@@ -1,0 +1,259 @@
+/* 基础布局 */
+.library-container {
+  display: flex;
+  flex-direction: column; /* 修改为垂直布局 */
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* 筛选侧边栏 */
+.filters-sidebar {
+  width: 100%; /* 宽度占满父容器 */
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.filter-group {
+  margin-bottom: 2rem;
+}
+
+.filter-group h3 {
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* 类型按钮 */
+.filter-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 0.5rem;
+}
+
+.filter-options button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-options button:hover {
+  background: #e2e8f0;
+}
+
+.filter-options button.active {
+  background: #334155;
+  color: white;
+}
+
+/* 下拉菜单 */
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+/* 电影列表 */
+.movie-list {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.movie-card:hover {
+  transform: translateY(-3px);
+}
+
+.poster {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.movie-info {
+  padding: 1rem;
+}
+
+.movie-info h3 {
+  color: #1e293b;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.rating {
+  color: #f59e0b;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.meta {
+  display: flex;
+  gap: 0.8rem;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* 分页 */
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  grid-column: 1 / -1;
+}
+
+.pagination button {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.pagination button:hover {
+  border-color: #cbd5e1;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination input {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  width: 60px;
+  text-align: center;
+}
+
+/* 加载状态 */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f1f5f9;
+  border-top-color: #334155;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 空状态 */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  grid-column: 1 / -1;
+}
+
+.empty-state img {
+  width: 160px;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.empty-state button {
+  padding: 0.6rem 1.5rem;
+  background: #334155;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .library-container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .movie-list {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .poster {
+    height: 240px;
+  }
+}
+/* 新增搜索框样式 */
+.search-box {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  max-width: 500px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #e3e3e3;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #42b983;
+}
+
+.search-box button {
+  padding: 10px 25px;
+  background: #42b983;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background: #3aa876;
+}

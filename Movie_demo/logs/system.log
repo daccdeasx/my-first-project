@@ -1,0 +1,115 @@
+INFO 2026-03-27 19:00:14,669 middlewares 26340 1540 {"path": "/api/users/admin/posts/all/", "method": "GET", "status": 200, "duration": 0.007, "user": 5}
+INFO 2026-03-27 19:00:14,669 basehttp 26340 1540 "GET /api/users/admin/posts/all/?page=1&status=pending HTTP/1.1" 200 1994
+INFO 2026-03-27 19:00:15,288 middlewares 26340 1540 {"path": "/api/users/admin/posts/all/", "method": "GET", "status": 200, "duration": 0.006, "user": 5}
+INFO 2026-03-27 19:00:15,289 basehttp 26340 1540 "GET /api/users/admin/posts/all/?page=1&status=approved HTTP/1.1" 200 1995
+INFO 2026-03-27 19:00:16,065 middlewares 26340 1540 {"path": "/api/users/admin/posts/all/", "method": "GET", "status": 200, "duration": 0.006, "user": 5}
+INFO 2026-03-27 19:00:16,066 basehttp 26340 1540 "GET /api/users/admin/posts/all/?page=1&status=rejected HTTP/1.1" 200 1995
+INFO 2026-03-27 19:01:06,104 autoreload 26340 7092 D:\BS\Movie_demo\users\views.py changed, reloading.
+INFO 2026-03-27 19:01:07,692 autoreload 3068 6340 Watching for file changes with StatReloader
+INFO 2026-03-27 19:01:33,976 autoreload 3068 6340 D:\BS\Movie_demo\users\views.py changed, reloading.
+INFO 2026-03-27 19:01:35,570 autoreload 10232 15012 Watching for file changes with StatReloader
+INFO 2026-03-27 19:02:10,935 autoreload 10232 15012 D:\BS\Movie_demo\users\views.py changed, reloading.
+INFO 2026-03-27 19:02:12,619 autoreload 9060 22636 Watching for file changes with StatReloader
+INFO 2026-03-27 19:02:19,572 middlewares 9060 7164 {"path": "/media/avatars/\u7eeb\u534e2.png", "method": "GET", "status": 200, "duration": 0.003, "user": null}
+INFO 2026-03-27 19:02:19,576 basehttp 9060 7164 "GET /media/avatars/%E7%BB%AB%E5%8D%8E2.png?ts=1774609207010 HTTP/1.1" 200 426214
+INFO 2026-03-27 19:02:21,620 middlewares 9060 7624 {"path": "/api/users/profile/", "method": "GET", "status": 200, "duration": 2.05, "user": 5}
+INFO 2026-03-27 19:02:21,621 basehttp 9060 7624 "GET /api/users/profile/ HTTP/1.1" 200 259
+INFO 2026-03-27 19:02:21,624 middlewares 9060 12128 {"path": "/api/users/notifications/", "method": "GET", "status": 200, "duration": 2.055, "user": 5}
+INFO 2026-03-27 19:02:21,624 basehttp 9060 12128 "GET /api/users/notifications/ HTTP/1.1" 200 675
+INFO 2026-03-27 19:02:21,651 middlewares 9060 12128 {"path": "/api/users/admin/posts/all/", "method": "GET", "status": 200, "duration": 0.009, "user": 5}
+INFO 2026-03-27 19:02:21,652 basehttp 9060 12128 "GET /api/users/admin/posts/all/?page=1 HTTP/1.1" 200 1979
+INFO 2026-03-27 19:02:22,721 middlewares 9060 12128 {"path": "/api/users/admin/posts/all/", "method": "GET", "status": 200, "duration": 0.005, "user": 5}
+INFO 2026-03-27 19:02:22,722 basehttp 9060 12128 "GET /api/users/admin/posts/all/?page=1&status=pending HTTP/1.1" 200 52
+INFO 2026-03-27 19:02:23,688 middlewares 9060 12128 {"path": "/api/users/admin/posts/all/", "method": "GET", "status": 200, "duration": 0.008, "user": 5}
+INFO 2026-03-27 19:02:23,688 basehttp 9060 12128 "GET /api/users/admin/posts/all/?page=1&status=approved HTTP/1.1" 200 843
+INFO 2026-03-27 19:02:24,426 middlewares 9060 12128 {"path": "/api/users/admin/posts/all/", "method": "GET", "status": 200, "duration": 0.006, "user": 5}
+INFO 2026-03-27 19:02:24,427 basehttp 9060 12128 "GET /api/users/admin/posts/all/?page=1&status=rejected HTTP/1.1" 200 1518
+INFO 2026-03-27 19:02:27,379 middlewares 9060 12128 {"path": "/api/users/admin/posts/all/", "method": "GET", "status": 200, "duration": 0.007, "user": 5}
+INFO 2026-03-27 19:02:27,379 basehttp 9060 12128 "GET /api/users/admin/posts/all/?page=1 HTTP/1.1" 200 1979
+INFO 2026-03-27 19:02:33,756 middlewares 9060 12128 {"path": "/api/users/admin/posts/all/", "method": "GET", "status": 200, "duration": 0.007, "user": 5}
+INFO 2026-03-27 19:02:33,757 basehttp 9060 12128 "GET /api/users/admin/posts/all/?page=1&status=approved HTTP/1.1" 200 843
+INFO 2026-03-27 19:02:35,022 middlewares 9060 12128 {"path": "/api/users/admin/posts/all/", "method": "GET", "status": 200, "duration": 0.007, "user": 5}
+INFO 2026-03-27 19:02:35,022 basehttp 9060 12128 "GET /api/users/admin/posts/all/?page=1&status=rejected HTTP/1.1" 200 1518
+INFO 2026-03-27 19:02:35,692 middlewares 9060 12128 {"path": "/api/users/admin/posts/all/", "method": "GET", "status": 200, "duration": 0.007, "user": 5}
+INFO 2026-03-27 19:02:35,692 basehttp 9060 12128 "GET /api/users/admin/posts/all/?page=1&status=approved HTTP/1.1" 200 843
+INFO 2026-03-27 19:02:37,006 middlewares 9060 12128 {"path": "/api/users/admin/posts/all/", "method": "GET", "status": 200, "duration": 0.008, "user": 5}
+INFO 2026-03-27 19:02:37,006 basehttp 9060 12128 "GET /api/users/admin/posts/all/?page=1 HTTP/1.1" 200 1979
+INFO 2026-03-27 19:02:42,711 middlewares 9060 12128 {"path": "/api/users/admin/users/", "method": "GET", "status": 200, "duration": 0.005, "user": 5}
+INFO 2026-03-27 19:02:42,712 basehttp 9060 12128 "GET /api/users/admin/users/?page=1&page_size=20&search= HTTP/1.1" 200 1433
+INFO 2026-03-27 19:07:53,576 middlewares 9060 22272 {"path": "/api/users/admin/users/", "method": "GET", "status": 200, "duration": 0.012, "user": 5}
+INFO 2026-03-27 19:07:53,576 basehttp 9060 22272 "GET /api/users/admin/users/?page=1&page_size=20&search= HTTP/1.1" 200 1433
+INFO 2026-03-27 19:09:16,875 basehttp 9060 22272 "OPTIONS /api/users/admin/users/1/role/ HTTP/1.1" 200 0
+INFO 2026-03-27 19:09:16,890 middlewares 9060 22272 {"path": "/api/users/admin/users/1/role/", "method": "PATCH", "status": 200, "duration": 0.015, "user": 5}
+INFO 2026-03-27 19:09:16,891 basehttp 9060 22272 "PATCH /api/users/admin/users/1/role/ HTTP/1.1" 200 63
+INFO 2026-03-27 19:09:37,829 middlewares 9060 22272 {"path": "/api/users/login/", "method": "POST", "status": 200, "duration": 0.193, "user": null}
+INFO 2026-03-27 19:09:37,829 basehttp 9060 22272 "POST /api/users/login/ HTTP/1.1" 200 92
+INFO 2026-03-27 19:09:37,838 middlewares 9060 22272 {"path": "/api/users/profile/", "method": "GET", "status": 200, "duration": 0.004, "user": 1}
+INFO 2026-03-27 19:09:37,839 basehttp 9060 22272 "GET /api/users/profile/ HTTP/1.1" 200 260
+INFO 2026-03-27 19:09:37,863 middlewares 9060 22272 {"path": "/api/users/notifications/", "method": "GET", "status": 200, "duration": 0.009, "user": 1}
+INFO 2026-03-27 19:09:37,864 basehttp 9060 22272 "GET /api/users/notifications/ HTTP/1.1" 200 529
+WARNING 2026-03-27 19:09:38,187 middlewares 9060 22388 {"path": "/media/avatars/lh.png", "method": "GET", "status": 404, "duration": 0.033, "user": null}
+WARNING 2026-03-27 19:09:38,187 log 9060 22388 Not Found: /media/avatars/lh.png
+WARNING 2026-03-27 19:09:38,188 basehttp 9060 22388 "GET /media/avatars/lh.png?ts=1774609777840 HTTP/1.1" 404 2810
+INFO 2026-03-27 19:09:39,111 middlewares 9060 19996 {"path": "/api/movies/tmdb/", "method": "GET", "status": 200, "duration": 0.625, "user": 1}
+INFO 2026-03-27 19:09:39,111 basehttp 9060 19996 "GET /api/movies/tmdb/?type=popular&page=1 HTTP/1.1" 200 13568
+INFO 2026-03-27 19:09:39,128 middlewares 9060 8084 {"path": "/api/movies/tmdb/", "method": "GET", "status": 200, "duration": 0.643, "user": 1}
+INFO 2026-03-27 19:09:39,128 basehttp 9060 8084 "GET /api/movies/tmdb/?type=top_rated&page=1 HTTP/1.1" 200 17989
+INFO 2026-03-27 19:09:39,770 middlewares 9060 22272 {"path": "/api/movies/tmdb/", "method": "GET", "status": 200, "duration": 1.601, "user": 1}
+INFO 2026-03-27 19:09:39,771 basehttp 9060 22272 "GET /api/movies/tmdb/?type=featured&page=1 HTTP/1.1" 200 14263
+INFO 2026-03-27 19:09:40,302 middlewares 9060 18512 {"path": "/api/movies/tmdb/", "method": "GET", "status": 200, "duration": 1.82, "user": 1}
+INFO 2026-03-27 19:09:40,303 basehttp 9060 18512 "GET /api/movies/tmdb/?type=now_playing&page=1 HTTP/1.1" 200 13884
+INFO 2026-03-27 19:09:51,514 middlewares 9060 18512 {"path": "/api/users/notifications/", "method": "GET", "status": 200, "duration": 0.011, "user": 1}
+INFO 2026-03-27 19:09:51,515 basehttp 9060 18512 "GET /api/users/notifications/ HTTP/1.1" 200 529
+WARNING 2026-03-27 19:09:51,516 middlewares 9060 24720 {"path": "/media/avatars/lh.png", "method": "GET", "status": 404, "duration": 0.015, "user": null}
+WARNING 2026-03-27 19:09:51,516 log 9060 24720 Not Found: /media/avatars/lh.png
+WARNING 2026-03-27 19:09:51,516 basehttp 9060 24720 "GET /media/avatars/lh.png?ts=1774609777840 HTTP/1.1" 404 2810
+INFO 2026-03-27 19:09:51,626 middlewares 9060 18512 {"path": "/api/users/profile/", "method": "GET", "status": 200, "duration": 0.005, "user": 1}
+INFO 2026-03-27 19:09:51,626 basehttp 9060 18512 "GET /api/users/profile/ HTTP/1.1" 200 260
+INFO 2026-03-27 19:09:51,771 middlewares 9060 18512 {"path": "/api/users/admin/dashboard/", "method": "GET", "status": 200, "duration": 0.018, "user": 1}
+INFO 2026-03-27 19:09:51,771 basehttp 9060 18512 "GET /api/users/admin/dashboard/ HTTP/1.1" 200 659
+WARNING 2026-03-27 19:09:52,069 middlewares 9060 22820 {"path": "/media/avatars/lh.png", "method": "GET", "status": 404, "duration": 0.007, "user": null}
+WARNING 2026-03-27 19:09:52,069 log 9060 22820 Not Found: /media/avatars/lh.png
+WARNING 2026-03-27 19:09:52,069 basehttp 9060 22820 "GET /media/avatars/lh.png HTTP/1.1" 404 2793
+INFO 2026-03-27 19:09:54,014 middlewares 9060 18512 {"path": "/api/admin/movies/", "method": "GET", "status": 200, "duration": 0.009, "user": 1}
+INFO 2026-03-27 19:09:54,015 basehttp 9060 18512 "GET /api/admin/movies/?page=1&page_size=20&search= HTTP/1.1" 200 16363
+INFO 2026-03-27 19:09:55,381 middlewares 9060 18512 {"path": "/api/admin/reviews/", "method": "GET", "status": 200, "duration": 0.011, "user": 1}
+INFO 2026-03-27 19:09:55,382 basehttp 9060 18512 "GET /api/admin/reviews/?page=1&page_size=20&search=&status= HTTP/1.1" 200 4715
+INFO 2026-03-27 19:09:55,444 middlewares 9060 18512 {"path": "/api/admin/reviews/", "method": "GET", "status": 200, "duration": 0.01, "user": 1}
+INFO 2026-03-27 19:09:55,444 basehttp 9060 18512 "GET /api/admin/reviews/?page=1&page_size=20&search=&status= HTTP/1.1" 200 4715
+INFO 2026-03-27 19:10:10,408 middlewares 9060 18512 {"path": "/api/users/login/", "method": "POST", "status": 200, "duration": 0.168, "user": null}
+INFO 2026-03-27 19:10:10,409 basehttp 9060 18512 "POST /api/users/login/ HTTP/1.1" 200 92
+INFO 2026-03-27 19:10:10,432 middlewares 9060 18512 {"path": "/api/users/profile/", "method": "GET", "status": 200, "duration": 0.007, "user": 5}
+INFO 2026-03-27 19:10:10,432 basehttp 9060 18512 "GET /api/users/profile/ HTTP/1.1" 200 259
+INFO 2026-03-27 19:10:10,445 middlewares 9060 3344 {"path": "/media/avatars/\u7eeb\u534e2.png", "method": "GET", "status": 200, "duration": 0.002, "user": null}
+INFO 2026-03-27 19:10:10,447 basehttp 9060 3344 "GET /media/avatars/%E7%BB%AB%E5%8D%8E2.png?ts=1774609810435 HTTP/1.1" 200 426214
+INFO 2026-03-27 19:10:10,458 middlewares 9060 18512 {"path": "/api/users/notifications/", "method": "GET", "status": 200, "duration": 0.014, "user": 5}
+INFO 2026-03-27 19:10:10,459 basehttp 9060 18512 "GET /api/users/notifications/ HTTP/1.1" 200 675
+INFO 2026-03-27 19:10:10,774 views 9060 18512 缓存命中：tmdb_featured_-2411373728206524975
+INFO 2026-03-27 19:10:10,775 middlewares 9060 18512 {"path": "/api/movies/tmdb/", "method": "GET", "status": 200, "duration": 0.007, "user": 5}
+INFO 2026-03-27 19:10:10,775 basehttp 9060 18512 "GET /api/movies/tmdb/?type=featured&page=1 HTTP/1.1" 200 14263
+INFO 2026-03-27 19:10:10,778 views 9060 22272 缓存命中：tmdb_now_playing_-2411373728206524975
+INFO 2026-03-27 19:10:10,778 middlewares 9060 22272 {"path": "/api/movies/tmdb/", "method": "GET", "status": 200, "duration": 0.008, "user": 5}
+INFO 2026-03-27 19:10:10,778 views 9060 8084 缓存命中：tmdb_top_rated_-2411373728206524975
+INFO 2026-03-27 19:10:10,779 middlewares 9060 8084 {"path": "/api/movies/tmdb/", "method": "GET", "status": 200, "duration": 0.008, "user": 5}
+INFO 2026-03-27 19:10:10,779 basehttp 9060 22272 "GET /api/movies/tmdb/?type=now_playing&page=1 HTTP/1.1" 200 13884
+INFO 2026-03-27 19:10:10,779 basehttp 9060 8084 "GET /api/movies/tmdb/?type=top_rated&page=1 HTTP/1.1" 200 17989
+INFO 2026-03-27 19:10:12,808 views 9060 19996 缓存命中：tmdb_popular_-2411373728206524975
+INFO 2026-03-27 19:10:12,808 middlewares 9060 19996 {"path": "/api/movies/tmdb/", "method": "GET", "status": 200, "duration": 2.037, "user": 5}
+INFO 2026-03-27 19:10:12,808 basehttp 9060 19996 "GET /api/movies/tmdb/?type=popular&page=1 HTTP/1.1" 200 13568
+INFO 2026-03-27 19:10:23,940 basehttp 9060 19996 "OPTIONS /api/users/posts/?sort=1 HTTP/1.1" 200 0
+INFO 2026-03-27 19:10:23,979 middlewares 9060 19996 {"path": "/api/users/posts/", "method": "GET", "status": 200, "duration": 0.039, "user": 5}
+INFO 2026-03-27 19:10:23,980 basehttp 9060 19996 "GET /api/users/posts/?sort=1 HTTP/1.1" 200 2078
+INFO 2026-03-27 19:10:26,899 basehttp 9060 19996 "OPTIONS /api/movies/tmdb/?type=top_rated&region=CN&language=zh-CN&page=1 HTTP/1.1" 200 0
+INFO 2026-03-27 19:10:27,885 middlewares 9060 19996 {"path": "/api/movies/tmdb/", "method": "GET", "status": 200, "duration": 0.983, "user": 5}
+INFO 2026-03-27 19:10:27,886 basehttp 9060 19996 "GET /api/movies/tmdb/?type=top_rated&region=CN&language=zh-CN&page=1 HTTP/1.1" 200 17991
+INFO 2026-03-27 19:10:32,065 basehttp 9060 19996 "OPTIONS /api/recommend/ HTTP/1.1" 200 0
+INFO 2026-03-27 19:10:32,352 recommendations 9060 19996 成功加载现有模型
+INFO 2026-03-27 19:10:32,352 recommendations 9060 19996 推荐服务初始化完成
+INFO 2026-03-27 19:10:32,353 recommendations 9060 19996 尝试加载用户特征文件: D:\BS\Movie_demo\data\mappings\user_features.pkl
+INFO 2026-03-27 19:10:32,353 recommendations 9060 19996 尝试加载电影特征文件: D:\BS\Movie_demo\data\mappings\movie_features.pkl
+INFO 2026-03-27 19:10:32,359 recommendations 9060 19996 成功加载特征缓存
+INFO 2026-03-27 19:10:32,359 recommendations 9060 19996 开始为用户 5 生成推荐
+INFO 2026-03-27 19:10:32,367 recommendations 9060 19996 使用深度学习模型生成推荐
+INFO 2026-03-27 19:10:32,817 recommendations 9060 19996 成功为用户 5 生成 5 个推荐
+INFO 2026-03-27 19:10:32,820 middlewares 9060 19996 {"path": "/api/recommend/", "method": "GET", "status": 200, "duration": 0.754, "user": 5}
+INFO 2026-03-27 19:10:32,820 basehttp 9060 19996 "GET /api/recommend/ HTTP/1.1" 200 666

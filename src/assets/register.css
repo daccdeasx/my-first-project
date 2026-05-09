@@ -1,0 +1,166 @@
+.register-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .register-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+
+/* 继承登录样式基础 */
+.register-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .register-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    background: white;
+    padding: 0 0.3rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  }
+  
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 0.8rem;
+    color: #4f46e5;
+  }
+  
+  /* 年份选择优化 */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    padding: 4px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%234f46e5' viewBox='0 0 24 24'><path d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z'/></svg>") center/contain no-repeat;
+  }
+  
+  input[type="date"]::-webkit-datetime-edit-year-field {
+    background: rgba(79, 70, 229, 0.1);
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+  
+  input[type="date"]::-webkit-datetime-edit {
+    color: #4a5568;
+  }
+  
+  /* 数字输入优化 */
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .number-controls {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .number-btn {
+    width: 24px;
+    height: 16px;
+    background: #e2e8f0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .number-btn:hover {
+    background: #4f46e5;
+    color: white;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 1rem;
+  }
+  
+  button[type="submit"]:hover {
+    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+  }
+  
+  @media (max-width: 480px) {
+    .register-container {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+    
+    input {
+      font-size: 0.9rem;
+    }
+  }

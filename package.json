@@ -1,0 +1,47 @@
+{
+  "name": "movie-web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@mdi/js": "^7.4.47",
+    "@vueuse/core": "^12.8.2",
+    "axios": "^1.8.2",
+    "chart.js": "^4.4.9",
+    "core-js": "^3.41.0",
+    "date-fns": "^4.1.0",
+    "dayjs": "^1.11.13",
+    "echarts": "^5.6.0",
+    "echarts-for-vue": "^1.4.1",
+    "element-plus": "^2.9.10",
+    "file-saver": "^2.0.5",
+    "hls.js": "^1.6.5",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "pinia": "^3.0.1",
+    "vue": "^3.5.13",
+    "vue-infinite-scroll": "^2.0.2",
+    "vue-masonry-css": "^1.0.3",
+    "vue-router": "^4.5.0",
+    "vue-waterfall-component": "^1.0.4",
+    "vue-waterfall-next": "^0.1.0",
+    "vue-waterfall-plugin-next": "^2.6.5",
+    "vue3-waterfall": "^0.2.0",
+    "vuetify": "^3.7.16",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "npm-force-resolutions": "^0.0.10",
+    "sass-embedded": "^1.85.1",
+    "vite": "^6.1.0",
+    "vite-plugin-vue-devtools": "^7.7.2"
+  }
+}

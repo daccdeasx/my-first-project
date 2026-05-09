@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据持久化测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .order {
+            background: #f5f5f5;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .status {
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: white;
+        }
+        .status.paid { background: #28a745; }
+        .status.refunded { background: #dc3545; }
+        .status.changed { background: #ffc107; color: black; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .clear-btn {
+            background: #dc3545;
+        }
+        .clear-btn:hover {
+            background: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>电影订单系统 - 数据持久化测试</h1>
+    
+    <div class="section">
+        <h2>本地存储订单数据</h2>
+        <button onclick="loadLocalOrders()">刷新数据</button>
+        <button onclick="clearLocalOrders()" class="clear-btn">清空本地数据</button>
+        <div id="localOrders"></div>
+    </div>
+    
+    <div class="section">
+        <h2>模拟操作测试</h2>
+        <button onclick="simulateRefund()">模拟退票操作</button>
+        <button onclick="simulateChange()">模拟改签操作</button>
+        <button onclick="addTestOrder()">添加测试订单</button>
+    </div>
+    
+    <div class="section">
+        <h2>数据验证</h2>
+        <button onclick="validateData()">验证数据完整性</button>
+        <div id="validation"></div>
+    </div>
+
+    <script>
+        function loadLocalOrders() {
+            const orders = JSON.parse(localStorage.getItem('localOrders') || '[]');
+            const container = document.getElementById('localOrders');
+            
+            if (orders.length === 0) {
+                container.innerHTML = '<p>暂无本地订单数据</p>';
+                return;
+            }
+            
+            container.innerHTML = orders.map(order => `
+                <div class="order">
+                    <strong>订单号:</strong> ${order.order_number}<br>
+                    <strong>电影:</strong> ${order.movie_title || '未知电影'}<br>
+                    <strong>影院:</strong> ${order.cinema_name || '未知影院'}<br>
+                    <strong>状态:</strong> <span class="status ${order.status}">${getStatusText(order.status)}</span><br>
+                    <strong>总价:</strong> ¥${order.total_price}<br>
+                    <strong>创建时间:</strong> ${new Date(order.created_at).toLocaleString()}<br>
+                    ${order.refund_time ? `<strong>退票时间:</strong> ${new Date(order.refund_time).toLocaleString()}<br>` : ''}
+                    ${order.change_time ? `<strong>改签时间:</strong> ${new Date(order.change_time).toLocaleString()}<br>` : ''}
+                    ${order.refund_reason ? `<strong>退票原因:</strong> ${order.refund_reason}<br>` : ''}
+                    ${order.change_reason ? `<strong>改签原因:</strong> ${order.change_reason}<br>` : ''}
+                </div>
+            `).join('');
+        }
+        
+        function getStatusText(status) {
+            const statusMap = {
+                'pending': '待支付',
+                'paid': '已支付',
+                'cancelled': '已取消',
+                'refunded': '已退款',
+                'changed': '已改签'
+            };
+            return statusMap[status] || '未知状态';
+        }
+        
+        function clearLocalOrders() {
+            if (confirm('确定要清空所有本地订单数据吗？')) {
+                localStorage.removeItem('localOrders');
+                loadLocalOrders();
+                alert('本地订单数据已清空');
+            }
+        }
+        
+        function simulateRefund() {
+            const orders = JSON.parse(localStorage.getItem('localOrders') || '[]');
+            const paidOrders = orders.filter(order => order.status === 'paid');
+            
+            if (paidOrders.length === 0) {
+                alert('没有可退票的订单');
+                return;
+            }
+            
+            const order = paidOrders[0];
+            order.status = 'refunded';
+            order.refund_time = new Date().toISOString();
+            order.refund_reason = '测试退票操作';
+            
+            localStorage.setItem('localOrders', JSON.stringify(orders));
+            loadLocalOrders();
+            alert(`订单 ${order.order_number} 退票成功`);
+        }
+        
+        function simulateChange() {
+            const orders = JSON.parse(localStorage.getItem('localOrders') || '[]');
+            const paidOrders = orders.filter(order => order.status === 'paid');
+            
+            if (paidOrders.length === 0) {
+                alert('没有可改签的订单');
+                return;
+            }
+            
+            const order = paidOrders[0];
+            order.status = 'changed';
+            order.original_schedule_time = order.schedule_time || order.show_time;
+            order.schedule_time = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
+            order.show_time = order.schedule_time;
+            order.change_time = new Date().toISOString();
+            order.change_reason = '测试改签操作';
+            
+            localStorage.setItem('localOrders', JSON.stringify(orders));
+            loadLocalOrders();
+            alert(`订单 ${order.order_number} 改签成功`);
+        }
+        
+        function addTestOrder() {
+            const orders = JSON.parse(localStorage.getItem('localOrders') || '[]');
+            const testOrder = {
+                id: 'test_' + Date.now(),
+                order_number: 'TEST' + Date.now(),
+                movie_title: '测试电影',
+                cinema_name: '测试影院',
+                schedule_time: new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString(),
+                show_time: new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString(),
+                seats: ['A1', 'A2'],
+                total_price: 80,
+                status: 'paid',
+                created_at: new Date().toISOString(),
+                movie_poster: null,
+                poster_path: null,
+                movie: {
+                    title: '测试电影',
+                    poster_path: null
+                }
+            };
+            
+            orders.push(testOrder);
+            localStorage.setItem('localOrders', JSON.stringify(orders));
+            loadLocalOrders();
+            alert('测试订单已添加');
+        }
+        
+        function validateData() {
+            const orders = JSON.parse(localStorage.getItem('localOrders') || '[]');
+            const validation = document.getElementById('validation');
+            
+            let report = '<h3>数据验证报告</h3>';
+            report += `<p>总订单数: ${orders.length}</p>`;
+            
+            const statusCount = {};
+            orders.forEach(order => {
+                statusCount[order.status] = (statusCount[order.status] || 0) + 1;
+            });
+            
+            report += '<p>状态分布:</p><ul>';
+            Object.entries(statusCount).forEach(([status, count]) => {
+                report += `<li>${getStatusText(status)}: ${count}</li>`;
+            });
+            report += '</ul>';
+            
+            // 检查数据完整性
+            const incompleteOrders = orders.filter(order => 
+                !order.order_number || !order.movie_title || !order.total_price
+            );
+            
+            if (incompleteOrders.length > 0) {
+                report += `<p style="color: red;">发现 ${incompleteOrders.length} 个不完整的订单</p>`;
+            } else {
+                report += '<p style="color: green;">所有订单数据完整</p>';
+            }
+            
+            validation.innerHTML = report;
+        }
+        
+        // 页面加载时自动加载数据
+        window.onload = function() {
+            loadLocalOrders();
+            validateData();
+        };
+    </script>
+</body>
+</html> 
